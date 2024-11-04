@@ -6,6 +6,7 @@ import 'react-pdf/src/Page/TextLayer.css'
 import { useEffect } from 'react';
 import { pages } from './constant';
 import IsLoading from './component/IsLoading';
+import IsError from './component/IsError';
 
 function App() {
  
@@ -18,7 +19,7 @@ function App() {
     <div className="flex flex-col items-center justify-center min-h-screen ">
     <main>
       <article>
-      <Document loading={IsLoading} file={`images/Catalogue.pdf`}>
+      <Document error={IsError} loading={IsLoading} file={`images/Catalogue.pdf`}>
       <div className='flex flex-col gap-5 py-5'>
        {pages.map((page)=>(
         <div key={page}>
