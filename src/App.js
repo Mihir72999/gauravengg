@@ -12,8 +12,8 @@ function App() {
  
   useEffect(()=>{
     pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
-     
   },[])
+     
   
   return (
     <div className="flex flex-col items-center justify-center min-h-screen ">
