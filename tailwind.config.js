@@ -2,7 +2,15 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors:{
+        
+        "pista":"#87dd4f"
+      },
+      backgroundColor:{
+        "pista":"#87dd4f"
+      }
+    },
   },
   plugins: [],
 }
