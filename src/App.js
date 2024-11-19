@@ -9,7 +9,7 @@ import IsLoading from './component/IsLoading';
 import IsError from './component/IsError';
 
 function App() {
- 
+ console.log(process.env.RENDER_DISCOVERY_SERVICE)
   useEffect(()=>{
     pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
   },[])
