@@ -14,8 +14,8 @@ module.exports = {
         }
       },
       animation:{
-       'spin':'spin 2s linear infinite',
-       'spinReverse':'spinReverse 2s linear infinite'
+       'spin':'spin 4s linear infinite',
+       'spinReverse':'spinReverse 4s linear infinite'
 
       },
       colors:{
