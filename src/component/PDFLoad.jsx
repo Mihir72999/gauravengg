@@ -17,7 +17,7 @@ const PDFLoad = () => {
       
      /////////////////////
      gsap.from('#box', {
-        x:1000,
+        x:window.innerWidth > 500 ? 1000 : 550,
         duration:1,
        yoyo:true
     })
