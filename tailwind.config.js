@@ -16,7 +16,9 @@ module.exports = {
       animation:{
        'spin':'spin 4s linear infinite',
        'spinReverse':'spinReverse 4s linear infinite'
-
+      },
+      rotate:{
+        '10':'25deg'
       },
       colors:{
         
