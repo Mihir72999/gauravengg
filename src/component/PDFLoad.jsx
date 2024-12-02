@@ -11,8 +11,8 @@ import gsap from 'gsap';
 const PDFLoad = () => {
     const [isloading , setIsLoading] = useState(true)
     
-    ////////////////////
     useEffect(()=>{
+     ////////////////////
      pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
       
      /////////////////////
