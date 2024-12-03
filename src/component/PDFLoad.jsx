@@ -6,7 +6,6 @@ import { useEffect, useState } from 'react';
 import { pages } from '../constant';
 import IsLoading from './IsLoading';
 import IsError from './IsError';
-import gsap from 'gsap';
 
 const PDFLoad = () => {
     const [isloading , setIsLoading] = useState(true)
@@ -14,23 +13,7 @@ const PDFLoad = () => {
     useEffect(()=>{
      ////////////////////
      pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
-      
-     /////////////////////
-     gsap.from('#box', {
-        x:window.innerWidth > 500 ? 1000 : 550,
-        duration:1,
-       yoyo:true
-    })
-    
-    gsap.to('#box', {
-        x:0,
-        duration:1,  
-        ease:"power4.in",
-        yoyo:true
-    })
   
-
-
      ////////////////////
      const time = setTimeout(()=>setIsLoading(false) , 2000)
         return ()=> clearTimeout(time)     
@@ -39,16 +22,25 @@ const PDFLoad = () => {
 
       ///////////////////
       if(isloading) return <IsLoading />    
-      const loadingText = ''
+      const loadingText = ()=>{
+        console.log('loading')
+      }
   
   
       //////////////////
       return (
-    <div  id="box" className=" flex flex-col items-center justify-center min-h-screen ">
+    <div  id="box" className="animate-gsapanimation overflow-x-hidden flex flex-col items-center justify-center min-h-screen">
     <main>
       <article  >
+      <div className='flex justify-center mt-1 text-gray-800 bg-pista py-2  items-center text-5xl leading-[70px] font-Phetsarath font-700 tracking-wide'>
+      <h1 className=''>This temporary webpage, <br/> 
+      Website under maintenance & 
+      upgrad
+      </h1>
+    </div>
+      
       <Document   error={IsError} loading={loadingText}  file={`images/Catalogue.pdf`}>
-      <div  className='box-0 flex flex-col gap-5 py-5'>
+      <div  className='box-0  flex flex-col gap-5 py-2'>
        {pages.map((page , index)=>(
          <div  key={index}>
          <Page    pageNumber={page}  width={window.innerWidth > 500 ? 850 : 350} />
