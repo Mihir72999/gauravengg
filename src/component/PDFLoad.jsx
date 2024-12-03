@@ -9,19 +9,31 @@ import IsError from './IsError';
 
 const PDFLoad = () => {
     const [isloading , setIsLoading] = useState(true)
-    
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);    
     useEffect(()=>{
      ////////////////////
      pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
   
+
+    // Handle window resize
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
      ////////////////////
      const time = setTimeout(()=>setIsLoading(false) , 2000)
-        return ()=> clearTimeout(time)     
-      },[isloading])
+        return ()=>{ 
+          clearTimeout(time);
+          window.removeEventListener('resize', handleResize);
+        }    
+      },[])
     
 
       ///////////////////
       if(isloading) return <IsLoading />    
+      
       const loadingText = ()=>{
         console.log('loading')
       }
@@ -43,7 +55,7 @@ const PDFLoad = () => {
       <div  className='box-0  flex flex-col gap-5 py-2'>
        {pages.map((page , index)=>(
          <div  key={index}>
-         <Page    pageNumber={page}  width={window.innerWidth > 500 ? 850 : 390} />
+         <Page    pageNumber={page}  width={windowWidth > 500 ? 850 : 390} />
         </div>
         ))} 
       </div>
