@@ -19,12 +19,22 @@ module.exports = {
          '100%':{
           'transform':'translateX(0px)'
          }
+        },
+        gsapy:{
+          '0%':{
+          'transform':'translateX(500px)'
+         },
+         '100%':{
+          'transform':'translateX(0px)'
+         }
         }
       },
       animation:{
        'spin':'spin 4s linear infinite',
        'spinReverse':'spinReverse 4s linear infinite',
-       'gsapanimation':'gsapx 2s linear backwards' 
+       'gsapanimation':'gsapx 2s linear backwards',
+       'gsapanimation1':'gsapy 2s linear backwards' 
+
       },
       rotate:{
         '10':'25deg'
