@@ -14,10 +14,10 @@ module.exports = {
         },
         gsapx:{
           '0%':{
-          'transform':'translateX(1500px)'
+          'transform':'translateX(100%)'
          },
          '100%':{
-          'transform':'translateX(0px)'
+          'transform':'translateX(0%)'
          }
         },
         gsapy:{
@@ -32,8 +32,8 @@ module.exports = {
       animation:{
        'spin':'spin 4s linear infinite',
        'spinReverse':'spinReverse 4s linear infinite',
-       'gsapanimation':'gsapx 2s linear backwards',
-       'gsapanimation1':'gsapy 2s linear backwards' 
+       'gsapanimation':'gsapx 2s linear forwards',
+       'gsapanimation1':'gsapy 2s linear forwards' 
 
       },
       rotate:{
