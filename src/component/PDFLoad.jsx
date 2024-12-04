@@ -32,7 +32,7 @@ const PDFLoad = () => {
     window.addEventListener('resize', handleResize);
 
      ////////////////////
-     const time = setTimeout(()=>setIsLoading(false) , 1000)
+     const time = setTimeout(()=>setIsLoading(false) , 1500)
         return ()=>{ 
           clearTimeout(time);
           window.removeEventListener('resize', handleResize);
