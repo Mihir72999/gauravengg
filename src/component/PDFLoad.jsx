@@ -48,7 +48,7 @@ const PDFLoad = () => {
       return <div className={` animate-gsapanimation overflow-x-hidden px-1 md:px-1 lg:px-0 flex flex-col items-center justify-center min-h-screen`}>
     <main>
       <article  >
-      <div className='flex justify-center mt-1 text-gray-800 bg-pista py-2 mx-1 px-1 lg:px-0 tracking-tight md:mx-1 lg:mx-0 items-center text-xl md:text-2xl lg:text-5xl leading-6 lg:leading-[70px] font-Phetsarath font-700 '>
+      <div className='flex justify-center mt-1 text-gray-800 bg-pista py-2  px-2 lg:px-0 tracking-tight  items-center text-xl md:text-2xl lg:text-5xl leading-8 md:leading-10 lg:leading-[60px] font-Phetsarath font-700 '>
       <h1 >This temporary webpage, <br/> 
       Website under maintenance & 
       upgrade
