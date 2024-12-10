@@ -45,15 +45,15 @@ const PDFLoad = () => {
       
   
       //////////////////
-      return <div className={` animate-gsapanimation overflow-x-hidden px-1 md:px-1 lg:px-0 flex flex-col items-center justify-center min-h-screen`}>
+      return <div className={` animate-gsapanimation  px-1 md:px-1 lg:px-0 flex flex-col items-center justify-center min-h-screen`}>
     <main>
-      <article  >
-      <div className='flex justify-center mt-1 text-gray-800 bg-pista py-2  px-2 lg:px-0 tracking-tight  items-center text-xl md:text-2xl lg:text-5xl leading-8 md:leading-10 lg:leading-[60px] font-Phetsarath font-700 '>
-      <h1 >This temporary webpage, <br/> 
+      <section>
+      <hader className='flex justify-center mt-1 text-gray-800 bg-pista py-2  px-3 lg:px-0 tracking-tight  items-center text-xl md:text-2xl lg:text-5xl leading-8 md:leading-10 lg:leading-[60px] '>
+      <h1 className=' font-700'>This is temporary webpage, <br/> 
       Website under maintenance & 
       upgrade
       </h1>
-    </div>
+    </hader>
       <Document   
        error={IsError} 
        file={`images/Catalogue.pdf`}
@@ -67,7 +67,7 @@ const PDFLoad = () => {
         ))} 
       </div>
       </Document>
-       </article>
+       </section>
     </main>
     </div>
     
