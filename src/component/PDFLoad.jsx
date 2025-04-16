@@ -47,10 +47,10 @@ const PDFLoad = () => {
       //////////////////
       return <div className={` animate-gsapanimation  px-1 md:px-1 lg:px-0 flex flex-col items-center justify-center min-h-screen`}>
     <main>
-      <hader className='flex justify-center mt-1 text-gray-800 bg-pista py-2  px-3 lg:px-0 tracking-tight  items-center text-xl md:text-2xl lg:text-5xl leading-8 md:leading-10 lg:leading-[60px] '>
-      <marquee direction='left' className=' font-700'>This is temporary webpage, 
+      <hader className='scroll-text flex justify-center mt-1 text-gray-800 bg-pista py-2  px-3 lg:px-0 tracking-tight  items-center text-xl md:text-2xl lg:text-5xl leading-8 md:leading-10 lg:leading-[60px] '>
+      <span  className=' font-700'>This is temporary webpage, 
        while we perform essential maintenance and upgrades, Thank you for visit Us
-      </marquee>
+      </span>
     </hader>
       <section className='flex justify-center'>
       <Document   

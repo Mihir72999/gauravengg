@@ -9,12 +9,36 @@ body {
   padding: 0;
   margin: 0;
   overflow-x: hidden;  
+  font-family: 'Phetsarath';
 }
   
 * {
   box-sizing: border-box;
 }
+
+.scroll-text {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.scroll-text span {
+  display: inline-block;
+  padding-left: 5%;
+  animation: scroll-left 30s linear 3s infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
  
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 /* src/index.css or src/styles.css */
 
 /* Define custom font with @font-face */
@@ -25,8 +49,5 @@ body {
   font-display: swap;
 }
 
-/* Optional: Provide a fallback font */
-body {
-  font-family: 'Phetsarath';
-}
+
 
