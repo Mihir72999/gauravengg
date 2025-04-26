@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Phetsarath:wght@400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,20 +9,22 @@ body {
   padding: 0;
   margin: 0;
   overflow-x: hidden;  
-  font-family: 'Phetsarath';
+  font-family: Phetsarath;
+  font-weight: 100;
+  font-display: swap;
 }
   
-* {
+
+ * {
   box-sizing: border-box;
 }
 
-.scroll-text {
+.scroll-text{
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
   box-sizing: border-box;
 }
-
 .scroll-text > span {
   display: inline-block;
   transform: translateX(90%);
@@ -39,17 +41,12 @@ body {
   100% {
     transform: translateX(-100%);
   }
-}
+} 
 
-/* src/index.css or src/styles.css */
-
-/* Define custom font with @font-face */
 
 @font-face {
   font-family: 'Phetsarath';
-  src: url('https://gauravengg.com/fonts/PhetsarathBold.woff2') format('woff2');
+  src: url('/public/fonts/PhetsarathBold.woff2') format('woff2');
   font-display: swap;
 }
-
-
 

@@ -34,7 +34,7 @@ module.exports = {
        'spinReverse':'spinReverse 4s linear infinite',
        'gsapanimation':'gsapx 2s linear forwards',
        'gsapanimation1':'gsapy 2s linear forwards' 
-
+       
       },
       rotate:{
         '10':'25deg'
@@ -48,8 +48,12 @@ module.exports = {
       colors:{
         
         "pista":"#87dd4f"
-      },
+      }
+      ,
       backgroundColor:{
+        "pista":"#87dd4f"
+      },
+      fill:{
         "pista":"#87dd4f"
       }
     },
