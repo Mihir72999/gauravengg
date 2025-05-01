@@ -1,7 +1,9 @@
 import IsError from "./IsError"
 import { Document, Page } from 'react-pdf';
 
-const PdfDocument = ({page ,onDocumentLoad,windowWidth}) =>(
+export default function PdfDocument ({page ,onDocumentLoad,windowWidth}){
+
+return (
     <Document   
        error={IsError} 
        file={`images/Catalogue.pdf`}
@@ -16,5 +18,4 @@ const PdfDocument = ({page ,onDocumentLoad,windowWidth}) =>(
       </div>
       </Document>
 )
-
-export default PdfDocument
+}

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const IsError = () => {
+export default function IsError(){
   return (
     <div className='flex flex-col items-center justify-center max-h-dvh'>
        <h1 role="alert" className='text-2xl tracking-tighter mb-3 font-semibold leading-tight'>Something Went Wrong Please Try Again</h1>
@@ -12,4 +12,4 @@ const IsError = () => {
   )
 }
 
-export default IsError
+

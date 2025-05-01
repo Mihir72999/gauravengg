@@ -8,7 +8,7 @@ import PdfDocument from './PdfDocument';
 
 
 
-const PDFLoad = () => {
+export default function PDFLoad ()  {
     const [isloading , setIsLoading] = useState(true)
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);    
     const [page ,setPage] = useState(null) 
@@ -60,7 +60,4 @@ const PDFLoad = () => {
     
 }
        
-            
-          
-
-export default PDFLoad
+  
