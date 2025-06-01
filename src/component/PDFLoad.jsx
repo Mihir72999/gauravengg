@@ -35,7 +35,7 @@ export default function PDFLoad ()  {
         return ()=>{ 
           clearTimeout(time);
           window.removeEventListener('resize', handleResize);
-        }    
+        }      
       },[handleResize])
     
 
