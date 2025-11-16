@@ -1,9 +1,0 @@
-# Set MIME type for PDF files
-AddType application/pdf .pdf
-
-# Enable Rewrite Engine for Single Page Application Routing
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^ index.html [L]
-</IfModule>
